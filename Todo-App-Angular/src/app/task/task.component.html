@@ -1,0 +1,25 @@
+<mat-card id="single-task">
+  <mat-card-content class="card-content">
+
+    <mat-checkbox *ngIf="task.status!='edit'" [checked]="task.status=='checked'" (click)="changeStatus()" #checkbox>
+    {{task.content}}
+    </mat-checkbox>
+
+    <!-- input di modifica qui -->
+    <mat-form-field class="edit-input-container" *ngIf="task.status=='edit'">
+      <input class="edit-input" matInput type="text"  (keypress)="actualizeEdit($event)">
+      <button  matSuffix mat-icon-button aria-label="Clear" (click)="undoChanges()">
+        <mat-icon>keyboard_backspace</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <div class="bottoni">
+      <button [disabled]="task.status=='edit'" (click)="editTask()" mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button (click)="deleteTask()" mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+  </mat-card-content>
+</mat-card>

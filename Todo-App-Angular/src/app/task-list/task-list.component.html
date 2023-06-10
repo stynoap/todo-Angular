@@ -1,0 +1,5 @@
+
+<ul class="container-task">
+  <!-- per ogni elemento task dell'array, aggiunge app-task. Assegno singolo task al componente task -->
+ <app-task id="single-task" *ngFor="let task of taskList" [task]="task"></app-task>
+</ul>

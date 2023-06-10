@@ -1,0 +1,27 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 98%;
+}
+
+.add-to-do{
+  height: 55px;
+  border-radius: 0px 50% 50% 0px;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media screen and (max-width: 780px) {
+  .container{
+    align-self: center;
+padding: 10px;
+  }
+}

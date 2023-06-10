@@ -1,0 +1,25 @@
+<div class="container">
+  <mat-card class="action-container" >
+    <mat-card-actions class="action" >
+      <button (click)="deleteAll()" mat-button>
+        <mat-icon>delete</mat-icon>
+        All
+      </button>
+      <button mat-button (click)="deleteChecked()">
+        <mat-icon>delete</mat-icon>
+        Checked
+      </button>
+      <button mat-button (click)="uncheckAll()">
+        <mat-icon>check_box_outline_blank</mat-icon>
+        All
+      </button>
+      <button mat-button (click)="checkAll()">
+        <mat-icon>check_box</mat-icon>
+        All
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+
+

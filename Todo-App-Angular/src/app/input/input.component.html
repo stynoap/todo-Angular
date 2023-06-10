@@ -1,0 +1,15 @@
+<div class="container">
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label></mat-label>
+      <input #input (keypress)="addWithEnter($event)" matInput placeholder="Insert your todo" value="">
+    </mat-form-field>
+  </form>
+
+  <button class="add-to-do" mat-raised-button (click)="add()">+</button>
+
+
+
+
+</div>
+
